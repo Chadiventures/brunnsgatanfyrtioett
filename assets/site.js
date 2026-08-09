@@ -1,11 +1,25 @@
+// ---------- HERO PARALLAX (Hem) ----------
+const heroSection = document.querySelector('.hero:not(.pagehero)');
+const heroMedia = heroSection ? heroSection.querySelector('.hero-media') : null;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (heroSection && heroMedia && !prefersReducedMotion && window.matchMedia('(min-width:980px)').matches) {
+  heroSection.addEventListener('mousemove', (e) => {
+    const r = heroSection.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+    const y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    heroMedia.style.transform = 'translate3d(' + (x * -12) + 'px, ' + (y * -9) + 'px, 0)';
+  });
+  heroSection.addEventListener('mouseleave', () => {
+    heroMedia.style.transform = 'translate3d(0,0,0)';
+  });
+}
+
 // ---------- NAV ----------
 const header = document.getElementById('siteHeader');
 if (header) {
-  const onScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 24);
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
 }
 const burger = document.getElementById('burgerBtn');
 const navLinks = document.getElementById('navLinks');
@@ -13,12 +27,10 @@ if (burger && navLinks) {
   burger.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
   });
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     navLinks.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
   }));
 }
 
@@ -26,28 +38,11 @@ if (burger && navLinks) {
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: .15 });
   revealEls.forEach(el => io.observe(el));
 } else {
   revealEls.forEach(el => el.classList.add('is-visible'));
-}
-
-// ---------- HERO ENTRANCE ----------
-const heroContent = document.querySelector('.hero-content');
-if (heroContent && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  heroContent.style.opacity = '0';
-  heroContent.style.transform = 'translateY(24px)';
-  requestAnimationFrame(() => {
-    heroContent.style.transition = 'opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)';
-    heroContent.style.opacity = '1';
-    heroContent.style.transform = 'translateY(0)';
-  });
 }
 
 // ---------- CAROUSEL (Hem) ----------
@@ -55,9 +50,8 @@ const carousel = document.getElementById('carousel');
 const galNext = document.getElementById('galNext');
 const galPrev = document.getElementById('galPrev');
 if (carousel && galNext && galPrev) {
-  const step = () => Math.min(420, carousel.clientWidth * 0.78);
-  galNext.addEventListener('click', () => carousel.scrollBy({ left: step(), behavior: 'smooth' }));
-  galPrev.addEventListener('click', () => carousel.scrollBy({ left: -step(), behavior: 'smooth' }));
+  galNext.addEventListener('click', () => carousel.scrollBy({ left: 340, behavior: 'smooth' }));
+  galPrev.addEventListener('click', () => carousel.scrollBy({ left: -340, behavior: 'smooth' }));
 }
 
 // ---------- RESERVATION FORM (Boka bord) ----------
