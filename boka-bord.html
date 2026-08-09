@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boka bord | Brunnsgatan 41</title>
+<meta name="description" content="Boka bord på Brunnsgatan 41 i Nyköping. Fyll i formuläret eller prata med vår digitala värd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brandmark" aria-label="Brunnsgatan 41, till startsidan">
+        <span class="coin">41</span>
+        <span class="word">Brunnsgatan<b>Nyköping</b></span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Öppna meny" aria-expanded="false">&#9776;</button>
+      <div class="navlinks" id="navLinks">
+        <a href="index.html">Hem</a>
+        <a href="om-oss.html">Om oss</a>
+        <a href="meny.html">Meny</a>
+        <a href="boka-bord.html" class="btn btn-primary active">Boka bord</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- RESERVATION -->
+  <section class="booksec" style="padding-top:150px;">
+    <span class="num-41" aria-hidden="true">41</span>
+    <div class="wrap">
+      <div class="book-grid">
+        <div class="reveal">
+          <p class="eyebrow" style="color:var(--brass-bright);">Boka bord</p>
+          <h2>Bordet väntar.</h2>
+          <p class="lead">Fyll i dina uppgifter, eller prata med vår digitala värd nere i hörnet, hen bokar lika gärna som hälsar. Vi bekräftar alltid bordet personligen innan kvällen.</p>
+          <div class="book-alt">
+            <button class="btn btn-ghost" style="border-color:rgba(243,234,217,.4); color:var(--parchment);" onclick="openChat()">Boka via chatten &#8594;</button>
+            <small>Föredrar du telefon? Mejla <a href="mailto:info@brunnsgatan41.com" style="color:var(--brass-bright);">info@brunnsgatan41.com</a></small>
+          </div>
+        </div>
+
+        <div class="bookcard reveal" id="bookcard">
+          <form id="reserveForm">
+            <h3>Boka bord</h3>
+            <div class="field">
+              <label for="rName">Namn</label>
+              <input type="text" id="rName" required autocomplete="name">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="rDate">Datum</label>
+                <input type="date" id="rDate" required>
+              </div>
+              <div class="field">
+                <label for="rTime">Tid</label>
+                <select id="rTime" required>
+                  <option value="">Välj tid</option>
+                  <option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option>
+                  <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                  <option>21:00</option><option>21:30</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="rGuests">Antal gäster</label>
+                <select id="rGuests" required>
+                  <option value="">Välj antal</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                  <option>5</option><option>6</option><option>7+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="rContact">Telefon eller e&#8209;post</label>
+                <input type="text" id="rContact" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="rNote">Önskemål (valfritt)</label>
+              <textarea id="rNote" rows="2" placeholder="Allergier, firande, önskat bord..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-wine">Skicka bokningsförfrågan</button>
+          </form>
+
+          <div class="confirm" id="confirmBox">
+            <div class="checkmark">&#10003;</div>
+            <h3>Din förfrågan är mottagen</h3>
+            <p>Vi hör av oss inom kort för att bekräfta bordet.</p>
+            <div class="deets" id="confirmDeets"></div>
+            <button class="btn btn-ghost" style="border-color:#d8cdb8; color:var(--ink); width:100%;" onclick="resetForm()">Boka ett till bord</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO PANEL -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="infopanel reveal">
+        <div class="ip">
+          <h4>Besök</h4>
+          <p>Brunnsgatan 41<br>611 32 Nyköping<br><a href="mailto:info@brunnsgatan41.com">info@brunnsgatan41.com</a></p>
+        </div>
+        <div class="ip">
+          <h4>Öppettider</h4>
+          <p>Tisdag&ndash;torsdag 17&ndash;22<br>Fredag&ndash;lördag 17&ndash;00<br>Söndag&ndash;måndag stängt</p>
+        </div>
+        <div class="ip">
+          <h4>Bra att veta</h4>
+          <p>Endast gäster 18 år och äldre. Väluppfostrade, mindre hundar är välkomna. Vi rekommenderar två till tre rätter per person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="coin">41</span>
+        <p>En intim kvarterskrog mitt i Nyköping. Mat gjord för att delas, vin valt av en mästare, och ett rum där alla känner sig hemma.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/brunnsgatan41/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100069283699155" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8h-2a2 2 0 0 0-2 2v10M9 13h6"/></svg></a>
+          <a href="https://www.tripadvisor.se/Restaurant_Review-g189867-d27178716-Reviews-Brunnsgatan_41-Nykoping_Sodermanland_County.html" target="_blank" rel="noopener" aria-label="Tripadvisor"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="13" r="4"/><circle cx="16" cy="13" r="4"/><path d="M12 9l2-3M12 9l-2-3M2 9h4M22 9h-4"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Besök</h5>
+        <p>Brunnsgatan 41<br>611 32 Nyköping</p>
+        <a href="mailto:info@brunnsgatan41.com">info@brunnsgatan41.com</a>
+      </div>
+      <div class="foot-col">
+        <h5>Öppettider</h5>
+        <p>Tisdag&ndash;torsdag 17&ndash;22</p>
+        <p>Fredag&ndash;lördag 17&ndash;00</p>
+        <p>Söndag&ndash;måndag stängt</p>
+      </div>
+      <div class="foot-col">
+        <h5>Utforska</h5>
+        <a href="om-oss.html">Om oss</a>
+        <a href="meny.html">Meny</a>
+        <a href="https://www.brunnsgatanfyrtioett.com/_files/ugd/3d69f4_7bfdcbf2c7574189beb648be3f3a7fe1.pdf" target="_blank" rel="noopener">Vinlista (PDF)</a>
+        <a href="boka-bord.html">Boka bord</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Brunnsgatan 41. Alla rättigheter förbehållna.</span>
+      <span>Design &amp; utveckling: <a href="https://shorelinetechstudio.se" target="_blank" rel="noopener">Shoreline Tech Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-launcher" id="chatLauncher" aria-label="Öppna chatt för bordsbokning">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15110D" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-8.4 8.4 8.4 8.4 0 0 1-4-1L3 20l1.2-4.5a8.4 8.4 0 1 1 16.8-4Z"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chatta med Brunnsgatan 41">
+  <div class="chat-head">
+    <div class="who">
+      <span class="coin">41</span>
+      <div>
+        <h4>Brunnsgatan 41</h4>
+        <small>Din digitala värd &middot; bokar bord &amp; svarar på frågor</small>
+      </div>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Stäng chatt">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="bubble bot">Hej och välkommen till Brunnsgatan 41! Jag hjälper dig gärna att boka bord, eller svarar på frågor om menyn, vinlistan eller kvällens stämning. Vad kan jag hjälpa dig med?</div>
+  </div>
+  <form class="chat-input" id="chatForm">
+    <label for="chatInput" class="visually-hidden">Skriv ett meddelande</label>
+    <input type="text" id="chatInput" placeholder="Skriv ditt meddelande..." autocomplete="off">
+    <button type="submit" aria-label="Skicka">&#8594;</button>
+  </form>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
