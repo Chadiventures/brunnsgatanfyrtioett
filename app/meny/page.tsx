@@ -33,7 +33,7 @@ export default function MenyPage() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
             Menyn
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.8rem,7vw,5.5rem)] font-semibold leading-[0.92] tracking-tight text-linen">
+          <h1 className="hero-heading mt-4 max-w-3xl text-[clamp(2.8rem,7vw,5.5rem)] text-linen">
             Gjord för att delas.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-linen/80">

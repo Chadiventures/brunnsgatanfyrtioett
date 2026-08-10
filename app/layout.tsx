@@ -11,6 +11,7 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -18,12 +19,14 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
   style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -48,8 +51,12 @@ export default function RootLayout({
     <html
       lang="sv"
       className={`${fraunces.variable} ${newsreader.variable} ${publicSans.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-linen font-sans text-ink">
+      <body
+        className="flex min-h-full flex-col bg-linen font-sans text-ink"
+        suppressHydrationWarning
+      >
         <div className="grain" aria-hidden="true" />
         <AmbientCursor />
         <ScrollProgress />

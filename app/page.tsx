@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Hero from "@/components/Hero";
 import ConceptCard from "@/components/ConceptCard";
-import TablePhoto from "@/components/TablePhoto";
 import { Gallery } from "@/components/Gallery";
 import StampsSection from "@/components/StampsSection";
 import ParallaxMedia from "@/components/ParallaxMedia";
@@ -13,9 +13,9 @@ export default function HomePage() {
     <>
       <Hero />
       <StampsSection stamps={stamps} />
-      <section className="px-5 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
-          <Reveal variant="left">
+      <section className="px-5 pb-24 pt-12 md:px-10 md:pb-32 md:pt-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <Reveal variant="soft">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
               Upplevelsen
             </p>
@@ -38,27 +38,48 @@ export default function HomePage() {
               Läs vår historia →
             </Link>
           </Reveal>
-          <Reveal delay={120} variant="scale">
-            <div className="photo-duo">
-              <TablePhoto
-                src="/images/matsal.png"
-                alt="Matsalen"
-                seed="home-matsal"
-                ratio="portrait"
-                objectPosition="center 35%"
-                caption="Matsalen"
-                sizes="(max-width: 768px) 50vw, 28vw"
-              />
-              <TablePhoto
-                src="/images/mat.png"
-                alt="Rätt från köket"
-                seed="home-mat"
-                ratio="portrait"
-                className="photo-duo-offset"
-                objectPosition="center 45%"
-                caption="Köket"
-                sizes="(max-width: 768px) 50vw, 22vw"
-              />
+          <Reveal delay={140} variant="soft">
+            <div className="grid grid-cols-[1.45fr_1fr] items-end gap-3 md:gap-4">
+              <figure className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/matsal.png"
+                  alt="Matsalen"
+                  fill
+                  sizes="(max-width: 768px) 55vw, 32vw"
+                  className="object-cover"
+                  style={{ objectPosition: "center 35%" }}
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+                  aria-hidden="true"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-4 md:p-5">
+                  <span className="h-px w-5 bg-gold-hairline" aria-hidden="true" />
+                  <span className="text-[0.65rem] uppercase tracking-[0.2em] text-linen/90">
+                    Matsalen
+                  </span>
+                </figcaption>
+              </figure>
+              <figure className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/mat.png"
+                  alt="Rätt från köket"
+                  fill
+                  sizes="(max-width: 768px) 40vw, 22vw"
+                  className="object-cover"
+                  style={{ objectPosition: "center 45%" }}
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+                  aria-hidden="true"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-3 md:p-4">
+                  <span className="h-px w-4 bg-gold-hairline" aria-hidden="true" />
+                  <span className="text-[0.6rem] uppercase tracking-[0.2em] text-linen/90">
+                    Köket
+                  </span>
+                </figcaption>
+              </figure>
             </div>
           </Reveal>
         </div>
@@ -96,21 +117,16 @@ export default function HomePage() {
       <section className="px-5 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-              <div className="max-w-xl">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
-                  Ur köket
-                </p>
-                <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
-                  Kvällen, i bilder.
-                </h2>
-                <p className="mt-5 text-base leading-relaxed text-ink/70">
-                  Lite av det som möter dig när ljuset går ner och lokalen fylls. Rått, grillat, sött
-                  och det som händer mellan tallrikarna. Resten får du uppleva själv. Helst snart.
-                </p>
-              </div>
-              <p className="max-w-xs text-sm leading-relaxed text-ink/70 md:text-right">
-                Bilderna räcker långt. Känslan vid bordet räcker längre.
+            <div>
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
+                Ur köket
+              </p>
+              <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
+                Kvällen, i bilder.
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/70">
+                Lite av det som möter dig när ljuset går ner och lokalen fylls. Rått, grillat, sött
+                och det som händer mellan tallrikarna. Resten får du uppleva själv. Helst snart.
               </p>
             </div>
           </Reveal>

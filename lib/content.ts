@@ -25,7 +25,7 @@ export const stamps = [
   { code: "FINE LEVEL", label: "WHITE GUIDE", seed: "wg", icon: "medal" as const },
   { code: "#1", label: "AV 90 I NYKÖPING", seed: "trip", icon: "star" as const },
   { code: "9,3/10", label: "THEFORK", seed: "fork", icon: "fork" as const },
-  { label: "MUNSKÄNKARNA", seed: "mun", icon: "leaf" as const },
+  { code: "★", label: "MUNSKÄNKARNA", seed: "mun", icon: "leaf" as const },
 ];
 
 export const concepts = [
@@ -52,28 +52,28 @@ export const team = [
     role: "Ägare",
     image: "/images/team/andreas-hanna.jpg",
     blurb:
-      "Driver restaurangen med känsla för både gäst och detalj, och ett gäng han kallar sitt andra hem. Hos Andreas är du aldrig bara en bokning.",
+      "Hälsar dig välkommen som om du redan varit här förut. För Andreas är varje bord en scen, och varje gäst någon värd att minnas.",
   },
   {
     name: "Tobias Mardla",
     role: "Köksmästare",
     image: "/images/team/tobias-mardla.jpg",
     blurb:
-      "Sätter tempot i köket och menyns riktning, med säsongens råvaror som utgångspunkt. Det du äter i kväll fanns kanske inte på menyn förra veckan.",
+      "Står vid grönsakerna innan solen gått upp, och låter säsongen bestämma kvällens riktning. Det du äter i kväll fanns kanske inte på menyn i går.",
   },
   {
     name: "Tess Ohlsson",
     role: "Chefsommelier",
     image: "/images/team/tess-ohlsson.jpg",
     blurb:
-      "Curerar vinlistan tallrik för tallrik, så varje glas möter rätten det serveras med. Fråga henne. Det är så de bästa kvällarna börjar.",
+      "Hör på rätten innan hon väljer glaset. När Tess häller upp är det själva mötet mellan vin och tallrik som firas.",
   },
   {
     name: "Karl Axelsson",
     role: "Kock",
     image: "/images/team/karl-axelsson.jpg",
     blurb:
-      "En del av kökslaget som varje kväll ser till att detaljerna sitter, tallrik efter tallrik. Den där sista finishen som får dig att stanna kvar.",
+      "Står vid grillen där röken och värmen gör jobbet. Karl är den som ser till att sista detaljen sitter, tallrik efter tallrik.",
   },
 ];
 

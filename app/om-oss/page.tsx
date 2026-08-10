@@ -33,7 +33,7 @@ export default function OmOssPage() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
             Om oss
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-[clamp(2.8rem,7vw,5.5rem)] font-semibold leading-[0.92] tracking-tight text-linen">
+          <h1 className="hero-heading mt-4 max-w-3xl text-[clamp(2.8rem,7vw,5.5rem)] text-linen">
             Historien bakom tegelväggarna.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-linen/80">
@@ -164,9 +164,9 @@ export default function OmOssPage() {
               ni känner varandra.
             </p>
           </Reveal>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
             {team.map((member, i) => (
-              <Reveal key={member.name} delay={i * 70}>
+              <Reveal key={member.name} delay={i * 70} variant="soft" className="h-full">
                 <TeamCard
                   name={member.name}
                   role={member.role}

@@ -88,19 +88,20 @@ export default function Hero() {
       </div>
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-28 md:px-10 md:pb-24">
         <div className="hero-copy max-w-xl md:max-w-2xl">
-          <p className="hero-rise hero-eyebrow text-[0.75rem] font-semibold uppercase tracking-[0.32em]">
+          <p className="hero-rise text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
             Brunnsgatan 41 · Nyköping
           </p>
-          <h1 className="hero-rise hero-rise-delay-1 hero-title mt-5 max-w-[18ch] font-display text-[clamp(2.8rem,7.4vw,6.6rem)] font-medium leading-[1.02] tracking-[-0.02em]">
-            Ditt nya <em className="hero-accent">favoritbord</em>
+          <h1 className="hero-rise hero-rise-delay-1 hero-heading mt-4 max-w-[14ch] text-[clamp(2.8rem,7vw,5.5rem)] text-linen">
+            Ditt nya
+            <br />
+            favoritbord
             <br />
             i Nyköping.
           </h1>
-          <p className="hero-rise hero-rise-delay-2 hero-lead mt-7 max-w-[46ch] text-base leading-relaxed md:text-[1.1rem]">
-            En intim kvarterskrog bakom handkarvade tegelväggar, där kök och matsal delar samma rum.
-            Rätterna är gjorda för att vandra runt bordet, vinet är valt av en mästare, och kvällen
-            blir sällan som du tänkt dig. På ett bra sätt. Hit kommer man som gäst, och går därifrån
-            som en i familjen.
+          <p className="hero-rise hero-rise-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-linen/80">
+            Ljuset dämpas, glasen klirrar, och rökigheten från grillen hänger kvar i luften. Här möts
+            hantverk och känsla i varje rätt, en scen där råvaran får tala och kvällen sätter sin egen
+            takt. Det här är Brunnsgatan 41.
           </p>
           <div className="hero-rise hero-rise-delay-3 mt-10 flex flex-wrap gap-4">
             <Link

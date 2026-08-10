@@ -17,7 +17,7 @@ export default function BokaBordPage() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
             Boka bord
           </p>
-          <h1 className="mt-4 font-display text-[clamp(2.8rem,6vw,4.8rem)] font-semibold leading-[0.92] tracking-tight text-forest">
+          <h1 className="hero-heading mt-4 text-[clamp(2.8rem,6vw,4.8rem)] text-forest">
             Bordet väntar.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
