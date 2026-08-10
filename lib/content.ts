@@ -66,7 +66,7 @@ export const team = [
     role: "Chefsommelier",
     image: "/images/team/tess-ohlsson.jpg",
     blurb:
-      "Hör på rätten innan hon väljer glaset. När Tess häller upp är det själva mötet mellan vin och tallrik som firas.",
+      "Läser av rätten innan hon väljer glaset. När Tess häller upp är det själva mötet mellan vin och tallrik som firas.",
   },
   {
     name: "Karl Axelsson",
