@@ -104,12 +104,12 @@ export default function Hero() {
         ))}
         <div className="hero-scrim" aria-hidden="true" />
       </div>
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-8 pt-24 sm:pb-16 sm:pt-28 md:px-10 md:pb-24">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-16 pt-28 md:justify-end md:px-10 md:pb-24 md:pt-28">
         <div className="hero-copy max-w-xl md:max-w-2xl">
           <p className="hero-rise text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-clay sm:text-[0.7rem] sm:tracking-[0.24em]">
             Brunnsgatan 41 · Nyköping
           </p>
-          <h1 className="hero-rise hero-rise-delay-1 hero-heading mt-3 text-[clamp(2.15rem,8.2vw,5.5rem)] text-linen [hyphens:none] sm:mt-4 sm:max-w-[14ch]">
+          <h1 className="hero-rise hero-rise-delay-1 hero-heading mt-3 text-[clamp(2.55rem,9.8vw,5.5rem)] text-linen [hyphens:none] sm:mt-4 sm:max-w-[14ch]">
             Ditt&nbsp;nya
             <br />
             favoritbord
