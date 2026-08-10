@@ -40,13 +40,29 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background: var(--linen);
   color: var(--ink);
-  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-family: var(--font-public-sans), "Public Sans", system-ui, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+main p:not([class*="font-quote"]):not([class*="uppercase"]):not([class*="font-display"]):not([class*="section-heading"]) {
+  font-family: var(--font-public-sans), "Public Sans", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .section-pad {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 ::selection {
@@ -183,6 +199,18 @@ body {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 0.92;
+}
+
+/* From Röster: "Hört vid borden." / body lead */
+.section-heading {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.section-body {
+  font-family: var(--font-public-sans), "Public Sans", system-ui, sans-serif;
+  font-weight: 400;
 }
 
 .hero-title {
@@ -370,7 +398,13 @@ body {
 }
 
 .photo-duo-offset {
-  transform: translateY(-8%);
+  transform: none;
+}
+
+@media (min-width: 640px) {
+  .photo-duo-offset {
+    transform: translateY(-8%);
+  }
 }
 
 @media (min-width: 768px) {

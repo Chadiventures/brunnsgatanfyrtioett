@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function OmOssPage() {
   return (
     <>
-      <section className="relative min-h-[70svh] overflow-hidden">
+      <section className="relative min-h-[58svh] overflow-hidden sm:min-h-[70svh]">
         <div className="absolute inset-0">
           <Image
             src="/images/party.png"
@@ -29,27 +29,26 @@ export default function OmOssPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/25" />
         </div>
-        <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-32 md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[58svh] max-w-7xl flex-col justify-end px-5 pb-12 pt-28 sm:min-h-[70svh] sm:pb-16 sm:pt-32 md:px-10">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
             Om oss
           </p>
-          <h1 className="hero-heading mt-4 max-w-3xl text-[clamp(2.8rem,7vw,5.5rem)] text-linen">
+          <h1 className="hero-heading mt-3 max-w-3xl text-[clamp(2.2rem,8.5vw,5.5rem)] text-linen sm:mt-4">
             Historien bakom tegelväggarna.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-linen/80">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-linen/80 sm:mt-6 sm:text-lg">
             Vi byggde inte en scen. Vi byggde ett vardagsrum. Ett ställe där gäster, kök och matsal
             delar samma kväll, och där man känner sig välkommen redan i dörren.
           </p>
         </div>
       </section>
-
-      <section className="px-5 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+      <section className="px-5 py-16 md:px-10 md:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Reveal>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
               Vår historia
             </p>
-            <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
+            <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-forest sm:text-4xl md:text-5xl">
               Ett vardagsrum med öppen köksdörr.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-ink/70">
@@ -72,7 +71,7 @@ export default function OmOssPage() {
               <p>{site.policy}</p>
             </div>
             <blockquote className="mt-10 border-l border-forest pl-5">
-              <p className="font-quote text-2xl italic leading-snug text-ink">
+              <p className="font-quote text-xl italic leading-snug text-ink sm:text-2xl">
                 “Vi är ett gäng som brinner för det här livet, och vi vill att varje kväll hos oss
                 ska kännas som en av årets bästa.”
               </p>
@@ -93,7 +92,7 @@ export default function OmOssPage() {
                 caption="Matsalen"
                 sizes="(max-width: 768px) 60vw, 32vw"
               />
-              <div className="col-span-5 flex flex-col gap-3 pt-8 md:gap-4 md:pt-16">
+              <div className="col-span-5 flex flex-col gap-3 pt-6 md:gap-4 md:pt-16">
                 <TablePhoto
                   src="/images/entre.png"
                   alt="Entre"
@@ -117,14 +116,13 @@ export default function OmOssPage() {
           </Reveal>
         </div>
       </section>
-
-      <section className="bg-forest px-5 py-24 md:px-10">
+      <section className="bg-forest px-5 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
               Vad vi drivs av
             </p>
-            <h2 className="mt-4 font-display text-4xl tracking-tight text-linen md:text-5xl">
+            <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-linen sm:text-4xl md:text-5xl">
               Nyfikenhet, tempo och yrkesstolthet.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-linen/80">
@@ -133,7 +131,7 @@ export default function OmOssPage() {
               bokar om, och varför det kan vara svårt att få plats när helgen närmar sig.
             </p>
           </Reveal>
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:mt-16 md:grid-cols-3 md:gap-10">
             {concepts.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <ConceptCard
@@ -148,14 +146,13 @@ export default function OmOssPage() {
           </div>
         </div>
       </section>
-
-      <section className="px-5 py-24 md:px-10">
+      <section className="px-5 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
               Teamet
             </p>
-            <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
+            <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-forest sm:text-4xl md:text-5xl">
               Där kök och matsal möts.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/70">
@@ -164,7 +161,7 @@ export default function OmOssPage() {
               ni känner varandra.
             </p>
           </Reveal>
-          <div className="mt-14 grid items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
+          <div className="mt-10 grid items-stretch gap-6 sm:mt-14 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-7">
             {team.map((member, i) => (
               <Reveal key={member.name} delay={i * 70} variant="soft" className="h-full">
                 <TeamCard
@@ -176,7 +173,7 @@ export default function OmOssPage() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-12 text-sm text-ink/70">
+          <p className="mt-10 text-sm text-ink/70 sm:mt-12">
             Vill du bli en del av teamet? Mejla{" "}
             <a href={`mailto:${site.email}`} className="text-forest hover:text-ink">
               {site.email}
@@ -185,15 +182,14 @@ export default function OmOssPage() {
           </p>
         </div>
       </section>
-
-      <section className="px-5 pb-28 md:px-10">
+      <section className="px-5 pb-20 md:px-10 md:pb-28">
         <Reveal>
-          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 border border-linen/20 bg-forest px-8 py-12 md:flex-row md:items-center md:px-14">
+          <div className="mx-auto flex max-w-7xl flex-col items-stretch justify-between gap-8 border border-linen/20 bg-forest px-5 py-10 sm:px-8 sm:py-12 md:flex-row md:items-center md:px-14">
             <div className="max-w-2xl">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
                 Evenemang
               </p>
-              <h2 className="mt-3 font-display text-3xl tracking-tight text-linen md:text-4xl">
+              <h2 className="mt-3 section-heading text-[1.65rem] tracking-tight text-linen sm:text-3xl md:text-4xl">
                 Vinmiddagar, gästspel och säsongens menyer.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-linen/80">
@@ -201,16 +197,16 @@ export default function OmOssPage() {
                 innan platserna är borta.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
               <a
                 href={`mailto:${site.email}`}
-                className="inline-flex rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-linen transition hover:bg-terracotta-deep"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-linen transition hover:bg-terracotta-deep"
               >
                 Mejla för info
               </a>
               <Link
                 href="/boka-bord"
-                className="inline-flex rounded-full border border-linen/35 px-6 py-3 text-sm font-semibold text-linen transition hover:border-clay hover:text-clay"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-linen/35 px-6 py-3 text-sm font-semibold text-linen transition hover:border-clay hover:text-clay"
               >
                 Boka bord
               </Link>

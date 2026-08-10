@@ -33,7 +33,7 @@ export default function Reveal({
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+      { threshold: 0.06, rootMargin: "0px 0px -32px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

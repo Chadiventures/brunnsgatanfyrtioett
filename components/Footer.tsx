@@ -3,8 +3,8 @@ import { site } from "@/lib/content";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-clay/20 bg-forest-deep">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-4 md:px-10">
+    <footer className="border-t border-clay/20 bg-forest-deep pb-[max(0px,env(safe-area-inset-bottom))]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4 md:gap-12 md:px-10 md:py-16">
         <div>
           <p className="font-display text-2xl tracking-tight text-linen">
             Brunnsgatan <span className="text-clay">41</span>
@@ -14,7 +14,7 @@ export default function Footer() {
             ett varmt gäng gör att gäster ofta stannar längre än de tänkt, och kommer tillbaka som
             gamla vänner.
           </p>
-          <div className="mt-6 flex gap-5 text-xs uppercase tracking-[0.16em] text-linen/70">
+          <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-xs uppercase tracking-[0.16em] text-linen/70">
             <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-clay">
               Instagram
             </a>
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-clay/20 bg-forest-deep px-5 py-5 text-center text-[0.7rem] tracking-wide text-linen/55 md:px-10">
+      <div className="border-t border-clay/20 bg-forest-deep px-5 pb-20 pt-5 text-center text-[0.7rem] tracking-wide text-linen/55 md:px-10 md:pb-5">
         © 2026 Brunnsgatan Fyrtioett. Alla rättigheter förbehållna.
       </div>
     </footer>

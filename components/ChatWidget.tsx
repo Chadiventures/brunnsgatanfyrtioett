@@ -65,7 +65,7 @@ export default function ChatWidget() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 z-[100] grid h-14 w-14 place-items-center rounded-full border border-forest/30 bg-terracotta text-linen shadow-[0_16px_40px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep"
+        className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-4 z-[100] grid h-14 w-14 place-items-center rounded-full border border-forest/30 bg-terracotta text-linen shadow-[0_16px_40px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep md:right-5"
         aria-label={open ? "Stäng chatt" : `Chatta med ${chatHost.name}`}
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
@@ -74,7 +74,7 @@ export default function ChatWidget() {
       </button>
       {open ? (
         <div
-          className="fixed bottom-24 right-5 z-[100] flex h-[min(560px,calc(100dvh-150px))] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-gold-hairline/50 bg-linen shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+          className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-[100] flex h-[min(70dvh,560px)] w-auto flex-col overflow-hidden rounded-2xl border border-gold-hairline/50 bg-linen shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:inset-x-auto sm:right-5 sm:bottom-24 sm:h-[min(560px,calc(100dvh-150px))] sm:w-[min(380px,calc(100vw-2rem))]"
           role="dialog"
           aria-label={`Chatta med ${chatHost.name} på Brunnsgatan 41`}
         >

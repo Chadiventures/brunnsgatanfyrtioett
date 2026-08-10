@@ -13,13 +13,13 @@ export default function HomePage() {
     <>
       <Hero />
       <StampsSection stamps={stamps} />
-      <section className="px-5 pb-24 pt-12 md:px-10 md:pb-32 md:pt-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <section className="px-5 pb-16 pt-10 md:px-10 md:pb-32 md:pt-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <Reveal variant="soft">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
               Upplevelsen
             </p>
-            <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
+            <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-forest sm:text-4xl md:text-5xl">
               Ett rum där kök och matsal andas samma luft.
             </h2>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-ink/70">
@@ -84,13 +84,13 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-      <section className="bg-forest px-5 py-24 md:px-10 md:py-32">
+      <section className="bg-forest px-5 py-16 md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
               Konceptet
             </p>
-            <h2 className="mt-4 max-w-2xl font-display text-4xl tracking-tight text-linen md:text-5xl">
+            <h2 className="mt-4 max-w-2xl section-heading text-[1.85rem] tracking-tight text-linen sm:text-4xl md:text-5xl">
               Mellanrätter, gjorda för att delas.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-linen/80">
@@ -99,7 +99,7 @@ export default function HomePage() {
               kommer tillbaka, och varför bordet känns som en plats man inte vill ge ifrån sig.
             </p>
           </Reveal>
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-10 grid gap-8 md:mt-16 md:grid-cols-3 md:gap-10">
             {concepts.map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <ConceptCard
@@ -114,14 +114,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-5 py-24 md:px-10 md:py-32">
+      <section className="px-5 py-16 md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <div>
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
                 Ur köket
               </p>
-              <h2 className="mt-4 font-display text-4xl tracking-tight text-forest md:text-5xl">
+              <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-forest sm:text-4xl md:text-5xl">
                 Kvällen, i bilder.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/70">
@@ -139,13 +139,13 @@ export default function HomePage() {
           />
         </div>
       </section>
-      <section className="border-y border-forest/30 bg-forest px-5 py-24 md:px-10 md:py-32">
+      <section className="border-y border-forest/30 bg-forest px-5 py-16 md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
               Röster
             </p>
-            <h2 className="mt-4 font-display text-4xl tracking-tight text-linen md:text-5xl">
+            <h2 className="mt-4 section-heading text-[1.85rem] tracking-tight text-linen sm:text-4xl md:text-5xl">
               Hört vid borden.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-linen/80">
@@ -153,11 +153,11 @@ export default function HomePage() {
               kvällar som stannar kvar, och som folk pratar om när de kommer hem.
             </p>
           </Reveal>
-          <div className="mt-16 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-8 md:mt-16 md:grid-cols-2 md:gap-10">
             {testimonials.map((t, i) => (
               <Reveal key={t.quote} delay={i * 90}>
                 <blockquote className="quote-glow border-t border-linen/25 pt-8">
-                  <p className="font-quote text-2xl italic leading-snug text-linen md:text-3xl">
+                  <p className="font-quote text-xl italic leading-snug text-linen sm:text-2xl md:text-3xl">
                     “{t.quote}”
                   </p>
                   <cite className="mt-5 block text-[0.65rem] not-italic uppercase tracking-[0.18em] text-clay">
@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden px-5 py-28 md:px-10 md:py-36">
+      <section className="relative overflow-hidden px-5 py-20 md:px-10 md:py-36">
         <ParallaxMedia src="/images/cocktail.png" alt="Cocktail" opacity={1} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
         <div className="relative z-10 mx-auto max-w-7xl text-center">
@@ -177,7 +177,7 @@ export default function HomePage() {
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               Reservera
             </p>
-            <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.75)] md:text-6xl">
+            <h2 className="mx-auto mt-5 max-w-3xl section-heading text-[1.85rem] tracking-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.75)] sm:text-4xl md:text-6xl">
               Bordet väntar på dig.
             </h2>
             <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/95 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
@@ -186,7 +186,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/boka-bord"
-              className="btn-shine mt-10 inline-flex items-center justify-center rounded-full bg-terracotta px-8 py-4 text-sm font-semibold tracking-wide text-linen shadow-[0_8px_28px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep"
+              className="btn-shine mt-8 inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-terracotta px-8 py-4 text-sm font-semibold tracking-wide text-linen shadow-[0_8px_28px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep sm:mt-10 sm:w-auto"
             >
               Boka bord
             </Link>

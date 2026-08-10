@@ -28,7 +28,7 @@ export default function ConceptCard({
         {index}
       </p>
       <h3
-        className={`mt-4 font-display text-2xl tracking-tight transition duration-500 ${
+        className={`mt-4 section-heading text-2xl tracking-tight transition duration-500 ${
           dark
             ? "text-linen group-hover:text-clay"
             : "text-forest group-hover:text-terracotta"

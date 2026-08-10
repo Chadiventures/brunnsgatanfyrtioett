@@ -70,7 +70,7 @@ export default function ReservationForm() {
         <div className="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-full bg-terracotta text-2xl text-linen">
           ✓
         </div>
-        <h3 className="font-display text-2xl text-ink">Din förfrågan är mottagen</h3>
+        <h3 className="section-heading text-2xl text-ink">Din förfrågan är mottagen</h3>
         <p className="mt-3 text-ink/70">Vi hör av oss inom kort för att bekräfta bordet.</p>
         <dl className="mt-6 space-y-1 border border-gold-hairline/40 bg-linen px-4 py-4 text-left text-sm text-ink/70">
           <div>Namn: {form.name}</div>
@@ -96,7 +96,7 @@ export default function ReservationForm() {
 
   return (
     <form onSubmit={onSubmit} className="border border-gold-hairline/40 bg-clay/30 p-6 sm:p-8">
-      <h3 className="font-display text-2xl text-ink">Boka bord</h3>
+      <h3 className="section-heading text-2xl text-ink">Boka bord</h3>
       <p className="mt-2 text-sm text-ink/70">Vi bekräftar alltid personligen innan kvällen.</p>
       <div className="mt-6 space-y-4">
         <Field label="Namn">
@@ -174,7 +174,7 @@ export default function ReservationForm() {
       <button
         type="submit"
         disabled={busy}
-        className="mt-6 w-full rounded-full bg-terracotta px-4 py-3.5 text-sm font-semibold tracking-wide text-linen transition hover:bg-terracotta-deep disabled:opacity-60"
+        className="mt-6 min-h-12 w-full rounded-full bg-terracotta px-4 py-3.5 text-sm font-semibold tracking-wide text-linen transition hover:bg-terracotta-deep disabled:opacity-60"
       >
         {busy ? "Skickar..." : "Skicka bokningsförfrågan"}
       </button>

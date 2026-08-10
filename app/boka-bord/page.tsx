@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 export default function BokaBordPage() {
   return (
-    <section className="px-5 pb-28 pt-32 md:px-10 md:pt-40">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_1fr] lg:items-start">
+    <section className="px-5 pb-24 pt-28 md:px-10 md:pb-28 md:pt-40">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-start lg:gap-14">
         <Reveal>
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-forest">
             Boka bord
           </p>
-          <h1 className="hero-heading mt-4 text-[clamp(2.8rem,6vw,4.8rem)] text-forest">
+          <h1 className="hero-heading mt-3 text-[clamp(2.2rem,8vw,4.8rem)] text-forest sm:mt-4">
             Bordet väntar.
           </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-ink/70 sm:mt-6 sm:text-lg">
             Vi har bara plats för ett begränsat antal sällskap varje kväll. Det är en del av charmen,
             och anledningen till att de bästa kvällarna ofta bokas i tid.
           </p>
@@ -34,7 +34,7 @@ export default function BokaBordPage() {
               {site.email}
             </a>
           </p>
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4">
             <InfoCard title="Besök">
               Brunnsgatan 41
               <br />

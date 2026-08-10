@@ -23,7 +23,7 @@ export default function TeamCard({ name, role, blurb, image }: TeamCardProps) {
           aria-hidden="true"
         />
         <div className="absolute inset-x-0 bottom-0 p-5">
-          <h3 className="font-display text-xl tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] transition duration-500 group-hover:text-linen">
+          <h3 className="section-heading text-xl tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] transition duration-500 group-hover:text-linen">
             {name}
           </h3>
           <span
@@ -35,7 +35,7 @@ export default function TeamCard({ name, role, blurb, image }: TeamCardProps) {
           </p>
         </div>
       </div>
-      <p className="mt-5 min-h-[5.5rem] flex-1 text-sm leading-[1.75] text-ink/70">{blurb}</p>
+      <p className="mt-5 flex-1 text-sm leading-[1.75] text-ink/70">{blurb}</p>
     </article>
   );
 }

@@ -43,7 +43,7 @@ const slides = [
   },
 ];
 
-const INTERVAL_MS = 4500;
+const INTERVAL_MS = 3200;
 
 export default function Hero() {
   const [active, setActive] = useState(0);
@@ -86,38 +86,38 @@ export default function Hero() {
         ))}
         <div className="hero-scrim" aria-hidden="true" />
       </div>
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-28 md:px-10 md:pb-24">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-24 pt-28 sm:pb-20 md:px-10 md:pb-24">
         <div className="hero-copy max-w-xl md:max-w-2xl">
-          <p className="hero-rise text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">
+          <p className="hero-rise text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-clay sm:text-[0.7rem]">
             Brunnsgatan 41 · Nyköping
           </p>
-          <h1 className="hero-rise hero-rise-delay-1 hero-heading mt-4 max-w-[14ch] text-[clamp(2.8rem,7vw,5.5rem)] text-linen">
+          <h1 className="hero-rise hero-rise-delay-1 hero-heading mt-3 max-w-[14ch] text-[clamp(2.35rem,9vw,5.5rem)] text-linen sm:mt-4">
             Ditt nya
             <br />
             favoritbord
             <br />
             i Nyköping.
           </h1>
-          <p className="hero-rise hero-rise-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-linen/80">
-            Ljuset dämpas, glasen klirrar, och rökigheten från grillen hänger kvar i luften. Här möts
-            hantverk och känsla i varje rätt, en scen där råvaran får tala och kvällen sätter sin egen
-            takt. Det här är Brunnsgatan 41.
+          <p className="hero-rise hero-rise-delay-2 mt-5 max-w-xl text-base leading-relaxed text-linen/80 sm:mt-6 sm:text-lg">
+            Ljuset dämpas, glasen klirrar, och rätterna vandrar runt bordet från hand till hand. Här
+            delas maten som hemma, men känslan följer med långt efter att du lämnat bordet. Det här är
+            Brunnsgatan 41.
           </p>
-          <div className="hero-rise hero-rise-delay-3 mt-10 flex flex-wrap gap-4">
+          <div className="hero-rise hero-rise-delay-3 mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
             <Link
               href="/boka-bord"
-              className="btn-shine inline-flex items-center justify-center rounded-full bg-terracotta px-7 py-3.5 text-sm font-semibold tracking-wide text-linen shadow-[0_8px_28px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep"
+              className="btn-shine inline-flex min-h-12 w-full items-center justify-center rounded-full bg-terracotta px-7 py-3.5 text-sm font-semibold tracking-wide text-linen shadow-[0_8px_28px_rgba(0,0,0,0.45)] transition hover:bg-terracotta-deep sm:w-auto"
             >
               Boka bord
             </Link>
             <Link
               href="/meny"
-              className="inline-flex items-center justify-center rounded-full border border-white/80 bg-black/50 px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-[0_8px_28px_rgba(0,0,0,0.35)] backdrop-blur-sm transition hover:border-clay hover:text-clay"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/80 bg-black/50 px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-[0_8px_28px_rgba(0,0,0,0.35)] backdrop-blur-sm transition hover:border-clay hover:text-clay sm:w-auto"
             >
               Se menyn
             </Link>
           </div>
-          <div className="hero-rise hero-rise-delay-3 mt-10 flex items-center gap-2" aria-label="Bildspel">
+          <div className="hero-rise hero-rise-delay-3 mt-8 flex items-center gap-2 sm:mt-10" aria-label="Bildspel">
             {slides.map((slide, i) => (
               <button
                 key={slide.src}
@@ -125,8 +125,8 @@ export default function Hero() {
                 aria-label={`Visa bild ${i + 1}: ${slide.alt}`}
                 aria-current={i === active}
                 onClick={() => setActive(i)}
-                className={`h-1.5 rounded-full transition-all duration-500 ${
-                  i === active ? "w-10 bg-clay" : "w-1.5 bg-white/55 hover:bg-white/85"
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  i === active ? "w-8 bg-clay sm:w-10" : "w-2 bg-white/55 hover:bg-white/85"
                 }`}
               />
             ))}

@@ -27,9 +27,9 @@ export default function StampsSection({ stamps }: StampsSectionProps) {
   return (
     <section className="stamps-banner px-5 md:px-10" aria-label="Utmärkelser">
       <div className="stamps-banner-glow" aria-hidden="true" />
-      <div className="relative z-[1] mx-auto max-w-6xl py-3.5 md:py-4">
+      <div className="relative z-[1] mx-auto max-w-6xl py-5 md:py-4">
         <motion.div
-          className="flex flex-wrap items-end justify-center gap-x-16 gap-y-8 sm:gap-x-20 md:gap-x-28 lg:gap-x-36"
+          className="grid grid-cols-2 items-end justify-items-center gap-x-4 gap-y-5 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-16 sm:gap-y-8 md:gap-x-28 lg:gap-x-36"
           initial={reduceMotion ? false : "hidden"}
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
