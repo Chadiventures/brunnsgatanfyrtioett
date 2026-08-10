@@ -52,14 +52,14 @@ export const team = [
     role: "Ägare",
     image: "/images/team/andreas-hanna.jpg",
     blurb:
-      "Hälsar dig välkommen som om du redan varit här förut. För Andreas är varje bord en scen, och varje gäst någon värd att minnas.",
+      "Hälsar dig välkommen som om du redan varit här förut. För Andreas är varje kväll personlig, och varje gäst någon värd att minnas.",
   },
   {
     name: "Tobias Mardla",
     role: "Köksmästare",
     image: "/images/team/tobias-mardla.jpg",
     blurb:
-      "Står vid grönsakerna innan solen gått upp, och låter säsongen bestämma kvällens riktning. Det du äter i kväll fanns kanske inte på menyn i går.",
+      "Handplockar råvarorna innan solen gått upp, och låter säsongen bestämma kvällens riktning. Det du äter i kväll fanns kanske inte på menyn i går.",
   },
   {
     name: "Tess Ohlsson",
