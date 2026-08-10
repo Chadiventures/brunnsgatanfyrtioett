@@ -183,6 +183,28 @@ main p:not([class*="font-quote"]):not([class*="uppercase"]):not([class*="font-di
     );
 }
 
+@media (max-width: 767px) {
+  .hero-scrim {
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.55) 32%,
+        rgba(0, 0, 0, 0.22) 58%,
+        rgba(0, 0, 0, 0.28) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45) 0%,
+        transparent 22%
+      );
+  }
+
+  .hero-slide-zoom {
+    animation-duration: 4.2s;
+  }
+}
+
 .hero-copy {
   color: #fff;
 }
@@ -453,6 +475,13 @@ main p:not([class*="font-quote"]):not([class*="uppercase"]):not([class*="font-di
   will-change: transform;
 }
 
+@media (max-width: 767px) {
+  .parallax-media img {
+    transform: translate3d(0, var(--py, 0px), 0) scale(1.06);
+    object-position: center 40%;
+  }
+}
+
 .quote-glow {
   position: relative;
 }
@@ -481,6 +510,58 @@ main p:not([class*="font-quote"]):not([class*="uppercase"]):not([class*="font-di
       #0c100e 55%,
       #080a08 100%
     );
+}
+
+.stamps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.stamps-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.5rem;
+  padding: 0.75rem 0.4rem;
+}
+
+.stamps-cell-0,
+.stamps-cell-1 {
+  border-bottom: 1px solid color-mix(in srgb, var(--gold-hairline) 18%, transparent);
+}
+
+.stamps-cell-0,
+.stamps-cell-2 {
+  border-right: 1px solid color-mix(in srgb, var(--gold-hairline) 18%, transparent);
+}
+
+@media (min-width: 640px) {
+  .stamps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem 4rem;
+  }
+
+  .stamps-cell {
+    min-height: 0;
+    padding: 0;
+    border: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .stamps-grid {
+    gap: 2rem 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stamps-grid {
+    gap: 2rem 9rem;
+  }
 }
 
 .stamps-banner-glow {

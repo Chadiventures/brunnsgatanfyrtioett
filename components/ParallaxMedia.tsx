@@ -20,7 +20,9 @@ export default function ParallaxMedia({ src, alt, opacity = 0.4 }: ParallaxMedia
       const rect = el.getBoundingClientRect();
       const view = window.innerHeight;
       const progress = (view - rect.top) / (view + rect.height);
-      const y = (progress - 0.5) * 60;
+      const y = window.matchMedia("(max-width: 767px)").matches
+        ? (progress - 0.5) * 24
+        : (progress - 0.5) * 60;
       el.style.setProperty("--py", `${y.toFixed(1)}px`);
     };
     onScroll();

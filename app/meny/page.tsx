@@ -23,11 +23,11 @@ export default function MenyPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover"
-            style={{ objectPosition: "center 45%" }}
+            className="object-cover object-[center_38%] sm:object-[center_45%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/15" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/30 sm:bg-none" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-black/75 via-black/40 to-black/15 sm:block" />
+          <div className="absolute inset-0 hidden bg-gradient-to-t from-black/70 via-transparent to-black/20 sm:block" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[55svh] max-w-7xl flex-col justify-end px-5 pb-12 pt-28 sm:min-h-[65svh] sm:pb-16 sm:pt-32 md:px-10">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">

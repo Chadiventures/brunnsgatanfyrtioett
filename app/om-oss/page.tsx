@@ -24,10 +24,9 @@ export default function OmOssPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover"
-            style={{ objectPosition: "center 30%" }}
+            className="object-cover object-[center_28%] sm:object-[center_30%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/35 sm:from-black/80 sm:via-black/35 sm:to-black/25" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[58svh] max-w-7xl flex-col justify-end px-5 pb-12 pt-28 sm:min-h-[70svh] sm:pb-16 sm:pt-32 md:px-10">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">

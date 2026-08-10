@@ -25,14 +25,14 @@ export default function StampsSection({ stamps }: StampsSectionProps) {
   })();
 
   return (
-    <section className="stamps-banner px-5 md:px-10" aria-label="Utmärkelser">
+    <section className="stamps-banner" aria-label="Utmärkelser">
       <div className="stamps-banner-glow" aria-hidden="true" />
-      <div className="relative z-[1] mx-auto max-w-6xl py-5 md:py-4">
+      <div className="relative z-[1] mx-auto max-w-6xl px-4 py-6 sm:px-8 sm:py-5 md:px-10 md:py-4">
         <motion.div
-          className="grid grid-cols-2 items-end justify-items-center gap-x-4 gap-y-5 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-16 sm:gap-y-8 md:gap-x-28 lg:gap-x-36"
+          className="stamps-grid"
           initial={reduceMotion ? false : "hidden"}
           whileInView="show"
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.35 }}
           variants={{
             hidden: {},
             show: {
@@ -42,21 +42,21 @@ export default function StampsSection({ stamps }: StampsSectionProps) {
             },
           }}
         >
-          {ordered.map((stamp) => {
+          {ordered.map((stamp, index) => {
             const featured = stamp.seed === FEATURED_SEED;
             return (
               <motion.div
                 key={stamp.seed}
-                className="flex justify-center"
+                className={`stamps-cell stamps-cell-${index}`}
                 variants={{
                   hidden: reduceMotion
                     ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: featured ? 14 : 10 },
+                    : { opacity: 0, y: featured ? 12 : 8 },
                   show: {
                     opacity: 1,
                     y: 0,
                     transition: {
-                      duration: reduceMotion ? 0 : featured ? 0.75 : 0.6,
+                      duration: reduceMotion ? 0 : featured ? 0.7 : 0.55,
                       ease: [0.22, 1, 0.36, 1],
                     },
                   },

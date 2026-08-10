@@ -39,43 +39,43 @@ export default function HomePage() {
             </Link>
           </Reveal>
           <Reveal delay={140} variant="soft">
-            <div className="grid grid-cols-[1.45fr_1fr] items-end gap-3 md:gap-4">
-              <figure className="relative aspect-[3/4] overflow-hidden">
+            <div className="grid grid-cols-2 items-stretch gap-2.5 sm:items-end sm:gap-3 md:gap-4">
+              <figure className="relative col-span-2 aspect-[16/11] overflow-hidden sm:col-span-1 sm:aspect-[3/4]">
                 <Image
                   src="/images/matsal.png"
                   alt="Matsalen"
                   fill
-                  sizes="(max-width: 768px) 55vw, 32vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 55vw, 32vw"
                   className="object-cover"
-                  style={{ objectPosition: "center 35%" }}
+                  style={{ objectPosition: "center 30%" }}
                 />
                 <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
                   aria-hidden="true"
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-4 md:p-5">
+                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-3.5 sm:p-4 md:p-5">
                   <span className="h-px w-5 bg-gold-hairline" aria-hidden="true" />
                   <span className="text-[0.65rem] uppercase tracking-[0.2em] text-linen/90">
                     Matsalen
                   </span>
                 </figcaption>
               </figure>
-              <figure className="relative aspect-[3/4] overflow-hidden">
+              <figure className="relative col-span-2 aspect-[16/11] overflow-hidden sm:col-span-1 sm:aspect-[3/4]">
                 <Image
                   src="/images/mat.png"
                   alt="Rätt från köket"
                   fill
-                  sizes="(max-width: 768px) 40vw, 22vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 40vw, 22vw"
                   className="object-cover"
-                  style={{ objectPosition: "center 45%" }}
+                  style={{ objectPosition: "center 42%" }}
                 />
                 <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
                   aria-hidden="true"
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-3 md:p-4">
+                <figcaption className="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 p-3.5 sm:p-3 md:p-4">
                   <span className="h-px w-4 bg-gold-hairline" aria-hidden="true" />
-                  <span className="text-[0.6rem] uppercase tracking-[0.2em] text-linen/90">
+                  <span className="text-[0.65rem] uppercase tracking-[0.2em] text-linen/90">
                     Köket
                   </span>
                 </figcaption>
@@ -169,10 +169,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden px-5 py-20 md:px-10 md:py-36">
+      <section className="relative min-h-[min(72svh,620px)] overflow-hidden px-5 py-16 md:min-h-0 md:px-10 md:py-36">
         <ParallaxMedia src="/images/cocktail.png" alt="Cocktail" opacity={1} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
-        <div className="relative z-10 mx-auto max-w-7xl text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/75" />
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center text-center">
           <Reveal variant="scale">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               Reservera

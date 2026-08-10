@@ -40,10 +40,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         onLight
-          ? "border-b border-forest/25 bg-linen/95 py-3 backdrop-blur-xl"
-          : "bg-transparent py-4 md:py-5"
+          ? "border-b border-forest/25 bg-linen/95 pt-[calc(env(safe-area-inset-top)+1.35rem)] pb-3 backdrop-blur-xl md:pt-[calc(env(safe-area-inset-top)+0.75rem)] md:pb-3"
+          : "bg-transparent pt-[calc(env(safe-area-inset-top)+1.35rem)] pb-4 md:pt-[calc(env(safe-area-inset-top)+1.25rem)] md:pb-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-10">
