@@ -40,7 +40,7 @@ export default function StampBadge({ code, label, featured = false }: StampBadge
         {code}
       </span>
       <span
-        className={`mt-2 max-w-[14ch] font-medium uppercase leading-snug sm:mt-1.5 sm:max-w-none ${
+        className={`mt-3.5 max-w-[14ch] font-medium uppercase leading-snug sm:mt-2 sm:max-w-none ${
           featured
             ? "text-[0.58rem] tracking-[0.14em] text-[#A89880]/60 sm:text-[0.55rem] sm:tracking-[0.2em]"
             : "text-[0.55rem] tracking-[0.12em] text-[#A89880]/50 sm:text-[0.52rem] sm:tracking-[0.2em]"
